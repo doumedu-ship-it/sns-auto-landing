@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SNS Auto — 콘텐츠 자동화</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0b0d12; --panel:#12161f; --line:#222836;
+    --fg:#e8ecf4; --muted:#98a2b8; --accent:#6c8cff; --accent2:#25d0a5;
+  }
+  body{
+    font-family:'Pretendard',-apple-system,'Segoe UI',system-ui,sans-serif;
+    background:var(--bg); color:var(--fg); line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  header{padding:22px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(11,13,18,.85);backdrop-filter:blur(10px);z-index:10}
+  header .wrap{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-weight:700;letter-spacing:-.02em;font-size:18px}
+  .logo span{color:var(--accent)}
+  nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:14px}
+  nav a:hover{color:var(--fg)}
+  .hero{padding:110px 0 90px;text-align:center;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:-40% 20% auto;height:520px;
+    background:radial-gradient(closest-side,rgba(108,140,255,.22),transparent);filter:blur(10px)}
+  .badge{position:relative;display:inline-block;font-size:13px;color:var(--accent2);
+    border:1px solid rgba(37,208,165,.3);background:rgba(37,208,165,.08);
+    padding:6px 14px;border-radius:999px;margin-bottom:24px}
+  h1{position:relative;font-size:clamp(34px,6vw,58px);line-height:1.15;letter-spacing:-.03em;font-weight:800}
+  h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{position:relative;color:var(--muted);font-size:clamp(15px,2.2vw,18px);margin:20px auto 34px;max-width:560px}
+  .cta{position:relative;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 26px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;transition:.18s}
+  .btn-p{background:var(--accent);color:#fff}
+  .btn-p:hover{background:#5878f0;transform:translateY(-1px)}
+  .btn-s{border:1px solid var(--line);color:var(--fg)}
+  .btn-s:hover{border-color:var(--accent)}
+  section{padding:76px 0;border-top:1px solid var(--line)}
+  h2{font-size:28px;letter-spacing:-.02em;margin-bottom:10px;text-align:center}
+  .lead{color:var(--muted);text-align:center;margin-bottom:44px;font-size:15px}
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px;transition:.2s}
+  .card:hover{border-color:rgba(108,140,255,.5);transform:translateY(-3px)}
+  .card .ico{font-size:26px;margin-bottom:12px}
+  .card h3{font-size:17px;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:14.5px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:18px;text-align:center}
+  .stat b{display:block;font-size:34px;font-weight:800;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat span{color:var(--muted);font-size:14px}
+  .final{text-align:center}
+  footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="logo">SNS<span>Auto</span></div>
+  <nav><a href="#features">기능</a><a href="#numbers">성과</a><a href="#start">시작하기</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="badge">● 테스트 배포 데모</div>
+  <h1>SNS 운영, 이제<br><em>자동으로</em> 굴러갑니다</h1>
+  <p class="sub">기획부터 작성, 예약 발행, 성과 리포트까지. 반복되는 콘텐츠 업무를 한 곳에서 끝내세요.</p>
+  <div class="cta">
+    <a class="btn btn-p" href="#start">무료로 시작하기</a>
+    <a class="btn btn-s" href="#features">기능 둘러보기</a>
+  </div>
+</div></div>
+
+<section id="features"><div class="wrap">
+  <h2>필요한 것만, 깔끔하게</h2>
+  <p class="lead">복잡한 설정 없이 바로 쓰는 4가지 핵심 기능</p>
+  <div class="grid">
+    <div class="card"><div class="ico">✍️</div><h3>콘텐츠 초안 생성</h3><p>주제 한 줄만 넣으면 채널별 톤에 맞춘 초안이 만들어집니다.</p></div>
+    <div class="card"><div class="ico">📅</div><h3>예약 발행</h3><p>여러 채널의 발행 일정을 캘린더 하나로 관리합니다.</p></div>
+    <div class="card"><div class="ico">📊</div><h3>성과 리포트</h3><p>도달·반응·유입을 자동 집계해 주간 리포트로 정리합니다.</p></div>
+    <div class="card"><div class="ico">🔁</div><h3>재활용 추천</h3><p>반응 좋았던 글을 골라 새로운 포맷으로 다시 제안합니다.</p></div>
+  </div>
+</div></section>
+
+<section id="numbers"><div class="wrap">
+  <h2>숫자로 보는 변화</h2>
+  <p class="lead">데모용 예시 수치입니다</p>
+  <div class="stats">
+    <div class="stat"><b>8시간</b><span>주당 절약 시간</span></div>
+    <div class="stat"><b>3.2배</b><span>발행량 증가</span></div>
+    <div class="stat"><b>97%</b><span>일정 준수율</span></div>
+    <div class="stat"><b>5분</b><span>초기 설정 시간</span></div>
+  </div>
+</div></section>
+
+<section id="start"><div class="wrap final">
+  <h2>지금 바로 시작해보세요</h2>
+  <p class="lead">카드 등록 없이 체험 가능합니다</p>
+  <a class="btn btn-p" href="#">무료로 시작하기</a>
+</div></section>
+
+<footer><div class="wrap">© 2026 SNS Auto · 테스트 목적으로 만든 데모 페이지입니다</div></footer>
+</body>
+</html>
